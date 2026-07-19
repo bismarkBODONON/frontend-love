@@ -70,6 +70,12 @@ defineProps<{
   font-weight: 800;
   margin: 0;
   color: var(--color-bordeaux);
+  /* Filet de sécurité : si jamais l'espace redevient trop juste,
+     le titre se tronque proprement avec "..." au lieu de wrapper
+     sur 2 lignes et de passer sous le bouton rond. */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .feature-card__subtitle {
@@ -115,6 +121,11 @@ defineProps<{
   }
   .feature-card__subtitle {
     font-size: 0.7rem;
+  }
+  .feature-card__chevron {
+    width: 26px;
+    height: 26px;
+    font-size: 1rem;
   }
 }
 </style>

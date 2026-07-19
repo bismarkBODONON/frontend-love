@@ -232,7 +232,7 @@ function goTo(path: string) {
   flex: 1;
   min-width: 0;
   max-width: 100%;
-  padding: 32px 36px 120px;
+  padding: 32px 36px 140px;
   position: relative;
   z-index: 1;
   background-size: cover;
@@ -267,7 +267,8 @@ function goTo(path: string) {
 
 .home__greeting {
   font-family: 'Brush Script MT', 'Segoe Script', cursive;
-  font-size: 1.5rem;
+  /* Fluide : s'adapte en continu à la largeur d'écran, ne casse jamais de palier brutalement */
+  font-size: clamp(1rem, 3.5vw, 1.5rem);
   color: var(--color-rose-fonce);
   margin-bottom: 2px;
 }
@@ -278,11 +279,13 @@ function goTo(path: string) {
 
 .home__title {
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: 2.8rem;
+  /* Fluide : évite que le prénom se casse sur 2 lignes sur petit écran (bug mobile corrigé) */
+  font-size: clamp(1.4rem, 6.5vw, 2.8rem);
   font-weight: 800;
-  line-height: 1.1;
+  line-height: 1.15;
   color: var(--color-rose-fonce);
   margin: 0;
+  overflow-wrap: break-word;
 }
 
 .home__header-actions {
@@ -542,29 +545,27 @@ function goTo(path: string) {
 /* ===== Responsive ===== */
 @media (max-width: 900px) {
   .home__main {
-    padding: 32px 24px 120px;
-  }
-  .home__title {
-    font-size: 2.2rem;
+    padding: 32px 24px 140px;
   }
   .home__quote-card {
     padding: 28px 28px;
   }
 }
 
+@media (max-width: 600px) {
+  .home__grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
+
 @media (max-width: 480px) {
   .home__main {
-    padding: 20px 16px 110px;
-  }
-  .home__title {
-    font-size: 1.7rem;
+    padding: 20px 16px 130px;
   }
   .home__quote-card {
     padding: 22px 18px;
     border-radius: 24px;
-  }
-  .home__grid {
-    gap: 12px;
   }
   .home__drawer {
     width: 85vw;

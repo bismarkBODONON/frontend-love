@@ -147,11 +147,20 @@
   100% { transform: translateY(calc(100vh + 60px)) rotate(720deg) scale(1.1); opacity: 0; }
 }
 
+/* Tablette / mobile large : colonne plus étroite pour laisser respirer le texte */
 @media (max-width: 640px) {
   .floral-column {
-    width: 28%;
-    min-width: 90px;
+    width: 24%;
+    min-width: 70px;
   }
   .floral-column__overlay { display: none; }
+}
+
+/* Téléphones étroits : encore plus compacte */
+@media (max-width: 420px) {
+  .floral-column {
+    width: 20%;
+    min-width: 56px;
+  }
 }
 </style>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Télécharger l'application</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Georgia, 'Playfair Display', serif;
+      background: linear-gradient(180deg, #FFFFFF, #FFF8FA 45%, #FFF0F5 100%);
+      padding: 24px;
+    }
+    .card {
+      max-width: 380px;
+      width: 100%;
+      background: #ffffff;
+      border-radius: 32px;
+      padding: 40px 32px;
+      text-align: center;
+      box-shadow: 0 12px 40px rgba(124, 23, 74, 0.15);
+    }
+    .heart {
+      font-size: 2.8rem;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: 1.6rem;
+      color: #C2185B;
+      margin-bottom: 8px;
+    }
+    p {
+      font-family: Arial, sans-serif;
+      font-size: 0.95rem;
+      color: #7C174A;
+      opacity: 0.75;
+      margin-bottom: 28px;
+      line-height: 1.5;
+    }
+    .btn {
+      display: inline-block;
+      width: 100%;
+      padding: 16px 24px;
+      background: linear-gradient(135deg, #7C174A, #C2185B 55%, #F55BA5);
+      color: #fff;
+      font-family: Arial, sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      border-radius: 999px;
+      box-shadow: 0 8px 24px rgba(245, 91, 165, 0.35);
+      transition: transform 0.15s ease;
+    }
+    .btn:active {
+      transform: scale(0.97);
+    }
+    .note {
+      margin-top: 20px;
+      font-family: Arial, sans-serif;
+      font-size: 0.78rem;
+      color: #7C174A;
+      opacity: 0.6;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="heart">💖</div>
+    <h1>Pour toi, mon amour</h1>
+    <p>Une application faite juste pour nous deux.<br/>Télécharge-la et ouvre-la depuis tes fichiers téléchargés.</p>
+    <a class="btn" href="https://drive.google.com/uc?export=download&id=1rnu8gG2EBldvGfatnDnyjX_tsYaIIraO">Télécharger l'application</a>
+    <p class="note">
+      Après le téléchargement, ouvre le fichier depuis tes "Téléchargements".<br/>
+      Si Android affiche un avertissement, appuie sur "Installer quand même" ou active temporairement "Sources inconnues" pour cette app.
+    </p>
+  </div>
+</body>
+</html>
